@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Subsequent Next Sibling Combinator</title>
+        <style>
+            *{
+                font-size: 30px;
+            }
+            div ~ p{
+                color:rgb(255, 105, 105);
+            }
+        </style>
+        </head>
+        <body>
+        <h1>Subsequent Next Sibling Combinator</h1>
+        <div>
+            <p>This is a paragraph.</p><!--subsequent sibling combinator is not used-->
+            <section>
+                <p>This is a paragraph inside section.</p><!--subsequent next sibling combinator is not used-->
+            </section>
+        </div>
+        <p>This is another paragraph after div.</p><!--subsequent next sibling combinator is used-->
+        <p>This is a third paragraph after div.</p><!--subsequent next sibling combinator is used-->
+        <p>This is a fourth paragraph after div.</p><!--subsequent next sibling combinator is used-->
+    </body>
+</html>

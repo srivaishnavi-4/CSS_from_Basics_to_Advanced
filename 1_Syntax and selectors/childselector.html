@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Child Selector</title></head>
+    <body>
+        <style>
+            *{
+                font-size: 30px;
+            }
+            div > p{
+                color:hotpink;
+            }
+        </style>
+        <h1>Child Selector</h1>
+        <div>
+            <p>This is a paragraph.</p><!--child selector is used-->
+            <section>
+                <p>This is a paragraph inside section.</p><!--child selector is not used-->
+            </section>
+        </div>
+    </body>
+</html>

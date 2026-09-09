@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Next Sibling Combinator</title>
+        <style>
+            *{
+                font-size: 30px;
+            }
+            div + p{
+                color:hotpink;
+            }
+        </style>
+        <h1>Next Sibling Combinator</h1>
+        <div>
+            <p>This is a paragraph.</p><!--next sibling combinator is not used-->
+            <section>
+                <p>This is a paragraph inside section.</p><!--next sibling combinator is not used-->
+            </section>
+        </div>
+        <p>This is another paragraph.next sibling combinator is used</p><!--next sibling combinator is used-->
+        <p>This is a third paragraph.next sibling combinator is not used</p><!--next sibling combinator is not used-->
+    </head>
+</html>

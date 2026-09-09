@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Inheritance in CSS</title></head>
+    <body>
+        <style>
+            .sample{
+                 color: blue;
+                 font-size: 20px;
+                   border: 1px solid red;/* border is not inherited by default */
+            }
+            #sample{
+                 color: blue;
+                 font-size: 20px;
+                 border: 1px solid red;
+            }
+            strong{
+                border:inherit;/* border is inherited by default */
+            }
+        </style>
+        <p class="sample">This is a paragraph with some <b>strong</b> text.</p>
+        <p id="sample">This is a paragraph with some <strong>strong</strong> text.</p>        
+    </body>
+</html>

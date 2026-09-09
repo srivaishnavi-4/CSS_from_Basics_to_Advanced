@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Syntax and Selectors</title></head>
+    <body>
+         <style>
+            *{
+                font-size: 30px;
+            }
+            pre{
+                color:blueviolet;
+            }
+            .simple{
+                color:rgb(128, 94, 0);
+            }
+            #sample{
+                color:#f809ac;
+            }
+            div p{
+                color:hotpink;
+            }
+        </style>
+        <h1>Simple  Selectors</h1>
+        <p class="simple">This is a simple paragraph.</p><!--class selector is used-->
+        <p id="sample">This is a sample paragraph.</p><!--id selector is used-->
+        <pre>This is a preformatted text.</pre><!--element selector is used-->
+        <h2>Combinator Selectors</h2>
+        <div>
+            <p>This is a paragraph.</p><!--descendant selector is used-->
+            <section>
+                <p>This is a paragraph inside section.</p><!--descendant selector is used-->
+            </section>
+        </div>
+         <p>This is another paragraph.</p>
+            <p>This is a third paragraph.</p>
+            <p>This is a fourth paragraph.</p>
+    </body>
+</html>
