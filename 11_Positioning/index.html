@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <style>
+        /* Global Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            color: #333333;
+            line-height: 1.6;
+            padding: 20px;
+            height: 2000px; /* Tall body to allow scrolling for fixed/sticky */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* 1. Fixed Positioning (Stays in viewport) */
+        .badge-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff416c;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        /* 2. Sticky Positioning */
+        .sticky-header {
+            position: sticky;
+            top: 20px;
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* 3. Relative & Absolute Positioning Container */
+        .card-relative {
+            position: relative; /* Acts as anchor for absolute child */
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+        
+        }
+
+        .badge-absolute {
+            position: absolute; /* Positioned relative to .card-relative */
+            top: -15px;
+            right: 20px;
+            background-color: #4facfe;
+            color: #ffffff;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            font-weight: bold;
+        
+        }
+
+        /* General layout helpers */
+        h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        p {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Element (Scroll down to see it stay pinned) -->
+    <div class="badge-fixed">Fixed Position</div>
+
+    <div class="container">
+
+        <!-- Sticky Element -->
+        <div class="sticky-header">
+            Sticky Header (Locks at top: 20px when scrolling)
+        </div>
+
+        <!-- Relative + Absolute Element -->
+        <div class="card-relative">
+            <span class="badge-absolute">Absolute Badge</span>
+            <h2>Relative & Absolute Card</h2>
+            <p>This container uses <code>position: relative</code>, making it the anchor point. The blue badge utilizes <code>position: absolute</code> to break out and pin itself precisely to the top-right corner of this parent box.</p>
+        </div>
+
+        <!-- Static Element Flow -->
+        <div class="card-relative">
+            <h2>Standard Flow (Static)</h2>
+            <p>Elements without a defined position property default to <code>position: static</code>, following the normal document layout flow sequentially.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

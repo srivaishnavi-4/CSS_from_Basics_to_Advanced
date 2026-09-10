@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox </title>
+  <style>
+    /* Global Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      padding: 20px;
+      background-color: #eef2f3;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    /* 1. THE FLEX CONTAINER (PARENT)     */
+    .flex-container {
+      display: flex;                  /* Enables Flexbox */
+      flex-direction: row;            /* Sets main axis to horizontal */
+      flex-wrap: wrap;                /* Allows items to wrap on smaller screens */
+      justify-content: space-between; /* Spaces items out evenly */
+      align-items: center;            /* Aligns items vertically in the center */
+      gap: 20px;                      /* Adds clean spacing between items */
+      
+      /* Visual Container Styles */
+      background-color: #ffffff;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      height: 450px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* 2. BASE STYLES FOR FLEX ITEMS      */
+    .flex-item {
+      background-color: #3498db;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 30px;
+      border-radius: 6px;
+      text-align: center;
+      min-width: 100px;
+    }
+
+    /* 3. ITEM-SPECIFIC FLEX PROPERTIES   */
+
+    /* Item 1: Takes up 1 share of free space */
+    .item-1 {
+      flex-grow: 1; 
+      background-color: #e74c3c; 
+    }
+
+    /* Item 2: Takes up 2 shares of free space (grows twice as fast) */
+    .item-2 {
+      flex-grow: 2; 
+      background-color: #2ecc71; 
+    }
+
+    /* Item 3: Takes up 1 share, but overrides container's vertical alignment */
+    .item-3 {
+      flex-grow: 1;
+      align-self: flex-end; /* Pushes this specific item to the bottom of the container */
+      background-color: #9b59b6; 
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Flexbox Interactive Layout</h1>
+
+  <!-- The Flexbox Container -->
+  <div class="flex-container">
+    <div class="flex-item item-1">Item 1 (flex-grow: 1)</div>
+    <div class="flex-item item-2">Item 2 (flex-grow: 2)</div>
+    <div class="flex-item item-3">Item 3 (align-self: flex-end)</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Grid </title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { padding: 20px; background-color: #f9f9f9; }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Creates 3 columns of equal fraction width */
+      grid-template-rows: 100px 200px;         /* Sets explicit row heights */
+      gap: 15px;                               /* Adds consistent spacing between cells */
+      background-color: #2c3e50;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .grid-item {
+      background-color: #ecf0f1;
+      color: #2c3e50;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+    }
+
+    /* Item placement and spanning */
+    .header {
+      grid-column: 1 / span 3; /* Spans across all 3 columns */
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .sidebar {
+      grid-column: 1;          /* Stays in the first column */
+      background-color: #3498db;
+      color: white;
+    }
+
+    .main-content {
+      grid-column: 2 / span 2; /* Spans across columns 2 and 3 */
+      background-color: #2ecc71;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="grid-item header">Header (Spans 3 Columns)</div>
+    <div class="grid-item sidebar">Sidebar content side</div>
+    <div class="grid-item main-content">Main Content (Spans 2 Columns)</div>
+  </div>
+
+</body>
+</html>

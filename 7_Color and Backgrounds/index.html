@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Color, Background, and Gradient Implementation</title>
+    <style>
+        /* Global Styles & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8; /* Solid background fallback */
+            color: #333333;             /* High contrast text color */
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* 1. Standard Solid Color Section */
+        .card-solid {
+            background-color: #ffffff;
+            color: #2c3e50;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 2. Linear Gradient Background Section */
+        .card-linear-gradient {
+            /* Fallback solid color for unsupported browsers */
+            background-color: #4facfe; 
+            /* Linear Gradient from top-left to bottom-right */
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: #ffffff; /* White text for contrast against dark/vibrant gradient */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+        }
+
+        /* 3. Radial Gradient Background Section */
+        .card-radial-gradient {
+            background-color: #f6d365;
+            /* Radial Gradient starting from the center */
+            background: radial-gradient(circle, #f6d365 0%, #fda085 100%);
+            color: #2d3748;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(253, 160, 133, 0.3);
+        }
+
+        /* 4. Gradient Text Implementation */
+        .gradient-text-heading {
+            font-size: 2.2rem;
+            font-weight: 800;
+            /* Applying gradient directly to text */
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Helper Typography Styling */
+        h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Component 1: Solid Color -->
+        <div class="card-solid">
+            <h2>Solid Background & Color</h2>
+            <p>This section uses a standard solid white background (<code>background-color: #ffffff</code>) paired with a dark slate text color (<code>color: #2c3e50</code>) to ensure optimal reading contrast.</p>
+        </div>
+
+        <!-- Component 2: Linear Gradient -->
+        <div class="card-linear-gradient">
+            <h2>Linear Gradient Background</h2>
+            <p>This block uses a 135-degree linear gradient transitioning smoothly from a vibrant cyan-blue to bright turquoise, combined with crisp white text for accessibility.</p>
+        </div>
+
+        <!-- Component 3: Radial Gradient & Gradient Text -->
+        <div class="card-radial-gradient">
+            <!-- Gradient Text Applied Here -->
+            <h2 class="gradient-text-heading">Gradient Text Effect</h2>
+            <p>The title above showcases a multi-color gradient clipped directly inside the text characters, set against a warm radial gradient background.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
